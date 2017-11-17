@@ -1,0 +1,4 @@
+.idea/
+*.pyc
+ll_env/
+db.sqlite3
