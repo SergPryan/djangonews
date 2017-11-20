@@ -6,13 +6,29 @@
 </head>
 <body>
 
-<div>
+
 {% for news in news_list  %}
     {{ news.header }}
     {{ news.body }}
     {{ news.date }}
 <br>
 {% endfor %}
+
+
+<div class="pagination">
+    <span class="step-links">
+        {% if news_list.has_previous %}
+            <a href="?page={{ news_list.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ news_list.number }} of {{ news_list.paginator.num_pages }}.
+        </span>
+
+        {% if news_list.has_next %}
+            <a href="?page={{ news_list.next_page_number }}">next</a>
+        {% endif %}
+    </span>
 </div>
 
 </body>
