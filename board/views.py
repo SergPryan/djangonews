@@ -49,5 +49,7 @@ def edit_news(request, news_id):
 
 
 def delete_news(request, news_id):
-    News.objects.get(id=news_id).delete()
+    news = News.objects.get(id=news_id)
+    news.image.delete()
+    news.delete()
     return HttpResponseRedirect(reverse('board:index'))
