@@ -6,11 +6,15 @@
 </head>
 <body>
 
+<a href="{% url 'board:new_news' %}">Add news</a>
+<br>
 
 {% for news in news_list  %}
     {{ news.header }}
     {{ news.body }}
     {{ news.date }}
+   <a href="{% url 'board:edit_news' news.id %}">Edit news</a>
+     <a href="{% url 'board:delete_news' news.id %}">Delete news</a>
 <br>
 {% endfor %}
 
