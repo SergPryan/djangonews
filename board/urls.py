@@ -1,6 +1,6 @@
 from django.conf.urls import url
 
-from board.controllers import NewsListView
+from board.controllers import IndexView, NewsListView
 from . import views
 
 urlpatterns = [
