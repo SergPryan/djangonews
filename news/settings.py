@@ -35,7 +35,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'board'
+    # my application
+    'board',
+    # other
+    'bootstrap3'
 ]
 
 MIDDLEWARE = [
@@ -121,3 +124,7 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
 
 MEDIA_URL = '/media/'
+
+BOOTSTRAP3 = {
+    'include_jquery': True,
+}
